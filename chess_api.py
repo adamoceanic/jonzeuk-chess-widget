@@ -1,6 +1,7 @@
 import requests
 import json
 from time import sleep
+from pprint import pprint as pp
 
 
 def getJson():
@@ -13,8 +14,8 @@ def getJson():
 
         if item['black'].find('anebir') != -1 or item['white'].find('anebir') != -1:
 
-            with open("/var/www/vhosts/jonze.uk/httpdocs/chess.txt", "w") as text_file:
-                text_file.write(item['fen'])  # + ','
+
+            pp(item['pgn'])
 
 def start():
     while True:
