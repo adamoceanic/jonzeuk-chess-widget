@@ -26,8 +26,7 @@ $(document).ready(function() {
     chess_data.games.some(function(game){
       if (game['white'].indexOf(opponent) != -1
       || game['black'].indexOf(opponent) != -1) {
-         current_position = game['fen'];
-         orientation = 'black';
+         current_position = game['fen'];         
          return true;
       }
     });
